@@ -3,6 +3,9 @@
     grid-template-columns: 2fr 2fr;
     gap: 1rem;
     margin-block: 1rem;
+    .false{
+        background-color: red;
+    }
     button{
         background-color: #4CAF50;
         color: white;
