@@ -1,0 +1,78 @@
+section {
+  display: grid;
+  align-content: center;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.hide {
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(200px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.house {
+  height: 20vh;
+  width: 20vw;
+  border: 6em, darkred;
+  margin: auto;
+  z-index: 2;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.button button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+}
+.button button :hover {
+  background-color: #45a049;
+  transform: scale(1.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-size: 100%;
+}
+
+h1, h2, h3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+body {
+  background-color: rgb(6, 0, 37);
+}
+
+.house {
+  background-color: red;
+}/*# sourceMappingURL=global.css.map */

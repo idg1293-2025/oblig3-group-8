@@ -1,0 +1,26 @@
+@use "layout/layout";
+@use "layout/container";
+@use "components/button";
+@use "_reset.scss";
+
+$header-font: "Lucida Console", "Courier New", monospace;
+$regular-font: Arial, Helvetica, sans-serif;
+$text: white;
+
+h1,h2,h3 {
+    font-family: $header-font;
+    color: $text;
+}
+
+p {
+    font-family: $regular-font;
+    color: $text;
+}
+
+body {
+    background-color: rgb(6, 0, 37);
+}
+
+.house{
+    background-color: red;
+}
