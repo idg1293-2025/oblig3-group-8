@@ -1,8 +1,13 @@
+
 section{
     display: grid;
     align-content: center;
     place-items: center;
-    min-height: 100vh;
+    min-height: 105vh;
+
+    h2 {
+        margin-bottom: 2%;
+    };
 }
 
 .hide {
@@ -17,3 +22,33 @@ section{
     filter: blur(0);
     transform: translateY(0);
 };
+
+// container
+.street{
+    grid-template-columns: 1fr 1fr 1fr;
+    top: 0;
+    overflow: hidden;
+    height: 200vh;
+}
+
+.bathroom {
+    width: 100vw;
+    height: 100vh;
+
+    h2 {
+        color:black;
+    }
+}
+
+
+
+.introduction--alex  {
+    height: 40vh;
+    width: 40vw;
+}
+
+.introduction {
+    p {
+        margin-bottom: 1%;
+    }
+}

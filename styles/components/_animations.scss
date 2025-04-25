@@ -1,0 +1,20 @@
+@keyframes movezoom {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(115%, 1px) scale(6);
+    }
+}
+
+
+
+.street{
+    .animate{
+        animation: movezoom 7s ease-in-out forwards;  
+    }
+    &--house__1{
+        transform: translate(0, 0) scale(1);
+      
+    }
+}

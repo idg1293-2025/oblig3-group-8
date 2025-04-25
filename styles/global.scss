@@ -2,6 +2,7 @@
 @use "layout/container";
 @use "components/button";
 @use "_reset.scss";
+@use "components/animations.scss";
 
 $header-font: "Lucida Console", "Courier New", monospace;
 $regular-font: Arial, Helvetica, sans-serif;
@@ -17,10 +18,39 @@ p {
     color: $text;
 }
 
-body {
-    background-color: rgb(6, 0, 37);
+.container {
+    background: linear-gradient(rgba(6, 0, 37, 1) 60%, rgba(145, 152, 229, 1)) 100%;
+}
+.street{
+    background: linear-gradient(rgb(145, 152, 229, 1) 60%, green) 100%;
 }
 
-.house{
-    background-color: red;
+
+.introduction {
+    background-image: url(svg/room.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    h2 {
+      color:black; 
+    }
+    p {
+        color:black;
+    }
+}
+
+.questions {
+    
+    h3 {
+        color:black;
+    }
+
+    p {
+        color:black;
+    }
+}
+
+.bathroom {
+    background-image: url(svg/room.svg);
+    background-size:100vw;
 }

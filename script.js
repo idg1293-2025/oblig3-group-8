@@ -13,6 +13,8 @@ const observer = new IntersectionObserver(elements => {
 hidden_elements.forEach(el => {
     observer.observe(el);
 });
+
+
 // Script collected from: https://javascript.plainenglish.io/how-to-implement-animation-on-scroll-with-vanilla-javascript-655093a38059
 const waterQuiz = [
     {
@@ -72,9 +74,53 @@ questionGroups.forEach(function(question, i) {
       // Logging to see the results of the script working
       console.log(guessedAmount);
       console.log(score);
+      questionCount++;
+      if(questionCount === waterQuiz.length){
+        showResult();
+      }
     });
   });
 });
 
+function showResult(){
+  const resultEl = document.getElementById('guessResult');
+  const normalUsage = document.getElementById('normalUsage');
+  const alexUsage = document.getElementById('alexUsage');
+  resultEl.textContent = `You Guessed ${guessedAmount} liters`;
+  alexUsage.textContent = `Alex Used ${alexAmount} liters`;
+  normalUsage.textContent = `The correct amount is ${normalAmount} liters`;
 
+  if(guessedAmount < normalAmount){
+    console.log("Wow You guessed the lowest amount of water try again?");
+  } else if(guessedAmount === normalAmount){
+    console.log("Wow You guessed the correct amount of water!");
+  } else if(guessedAmount < alexAmount){
+    console.log("Alex used the most water")
+  } else{
+    console.log("You guessed the most water used try again?")
+  }
+}
+document.addEventListener("DOMContentLoaded", function () {
+  // Target the element you want to animate
+  const target = document.querySelector(".street--house__1");
 
+  // Create the intersection observer
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Add animation class when the element is in view
+          target.classList.add("animate");
+          // Stop observing once animation is triggered
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.7 // Adjust this based on when you want to trigger the animation
+    }
+  );
+
+  // Start observing the target element
+  observer.observe(target);
+});

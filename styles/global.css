@@ -2,7 +2,10 @@ section {
   display: grid;
   align-content: center;
   place-items: center;
-  min-height: 100vh;
+  min-height: 105vh;
+}
+section h2 {
+  margin-bottom: 2%;
 }
 
 .hide {
@@ -18,12 +21,28 @@ section {
   transform: translateY(0);
 }
 
-.house {
-  height: 20vh;
-  width: 20vw;
-  border: 6em, darkred;
-  margin: auto;
-  z-index: 2;
+.street {
+  grid-template-columns: 1fr 1fr 1fr;
+  top: 0;
+  overflow: hidden;
+  height: 200vh;
+}
+
+.bathroom {
+  width: 100vw;
+  height: 100vh;
+}
+.bathroom h2 {
+  color: black;
+}
+
+.introduction--alex {
+  height: 40vh;
+  width: 40vw;
+}
+
+.introduction p {
+  margin-bottom: 1%;
 }
 
 .button {
@@ -35,21 +54,18 @@ section {
 .button .false {
   background-color: red;
 }
+.button .correct {
+  background-color: forestgreen;
+}
 .button button {
-  background-color: #4CAF50;
+  background-color: #867863;
   color: white;
   border: none;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease-in-out;
   text-align: center;
-}
-.button button :hover {
-  background-color: #45a049;
-  transform: scale(1.1);
 }
 
 * {
@@ -62,6 +78,21 @@ html, body {
   font-size: 100%;
 }
 
+@keyframes movezoom {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(115%, 1px) scale(6);
+  }
+}
+.street .animate {
+  animation: movezoom 7s ease-in-out forwards;
+}
+.street--house__1 {
+  transform: translate(0, 0) scale(1);
+}
+
 h1, h2, h3 {
   font-family: "Lucida Console", "Courier New", monospace;
   color: white;
@@ -72,10 +103,34 @@ p {
   color: white;
 }
 
-body {
-  background-color: rgb(6, 0, 37);
+.container {
+  background: linear-gradient(rgb(6, 0, 37) 60%, rgb(145, 152, 229)) 100%;
 }
 
-.house {
-  background-color: red;
+.street {
+  background: linear-gradient(rgb(145, 152, 229) 60%, green) 100%;
+}
+
+.introduction {
+  background-image: url(svg/room.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.introduction h2 {
+  color: black;
+}
+.introduction p {
+  color: black;
+}
+
+.questions h3 {
+  color: black;
+}
+.questions p {
+  color: black;
+}
+
+.bathroom {
+  background-image: url(svg/room.svg);
+  background-size: 100vw;
 }/*# sourceMappingURL=global.css.map */
