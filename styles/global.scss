@@ -25,20 +25,6 @@ p {
     background: linear-gradient(rgb(145, 152, 229, 1) 60%, green) 100%;
 }
 
-
-.introduction {
-    background-image: url(svg/room.svg);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    h2 {
-      color:black; 
-    }
-    p {
-        color:black;
-    }
-}
-
 .questions {
     
     h3 {
@@ -51,6 +37,8 @@ p {
 }
 
 .bathroom {
-    background-image: url(svg/room.svg);
-    background-size:100vw;
+    background-image: url(../../images/room.svg);
+    background-size: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
 }

@@ -10,25 +10,14 @@ section{
     };
 }
 
-.hide {
-    transition: all 1s;
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateY(200px);
-};
-
-.show{
-    opacity: 1;
-    filter: blur(0);
-    transform: translateY(0);
-};
 
 // container
 .street{
     grid-template-columns: 1fr 1fr 1fr;
     top: 0;
     overflow: hidden;
-    height: 200vh;
+    height: 120vh;
+    width: 100vw;
 }
 
 .bathroom {
@@ -37,18 +26,5 @@ section{
 
     h2 {
         color:black;
-    }
-}
-
-
-
-.introduction--alex  {
-    height: 40vh;
-    width: 40vw;
-}
-
-.introduction {
-    p {
-        margin-bottom: 1%;
     }
 }

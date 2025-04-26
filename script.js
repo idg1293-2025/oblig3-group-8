@@ -1,19 +1,19 @@
-const hidden_elements = document.querySelectorAll('.hide')
+const hidden_elements = document.querySelectorAll('.hide');
 const observer = new IntersectionObserver(elements => {
     elements.forEach(element => {
-        if(element.isIntersecting){
+        if (element.isIntersecting) {
             element.target.classList.add('show');
+        } else {
+            element.target.classList.remove('show');
         }
-        else{
-            element.target.classList.remove('show')
-        }
-    })
+    });
+}, {
+    threshold: 0.5 
 });
 
 hidden_elements.forEach(el => {
     observer.observe(el);
 });
-
 
 // Script collected from: https://javascript.plainenglish.io/how-to-implement-animation-on-scroll-with-vanilla-javascript-655093a38059
 const waterQuiz = [
@@ -112,12 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
           // Add animation class when the element is in view
           target.classList.add("animate");
           // Stop observing once animation is triggered
-          observer.unobserve(entry.target);
+          
+        }else {
+          target.classList.remove("animate");
         }
       });
     },
     {
-      threshold: 0.7 // Adjust this based on when you want to trigger the animation
+       // Adjust this based on when you want to trigger the animation
     }
   );
 
