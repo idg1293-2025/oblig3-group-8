@@ -24,6 +24,10 @@ section h2 {
   color: black;
 }
 
+.watertank {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .button {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -87,6 +91,27 @@ html, body {
 .street--house__1 {
   transform: translate(0, 0) scale(1);
   z-index: 3;
+}
+
+/*
+ Adding this for later
+@media (prefers-reduced-motion) {
+
+}
+*/
+figure {
+  width: 15vw;
+}
+figure figcaption {
+  margin-top: 20%;
+}
+
+.largest {
+  transform: scale(1.3);
+}
+
+.smallest {
+  transform: scale(0.7);
 }
 
 h1, h2, h3 {

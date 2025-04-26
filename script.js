@@ -86,18 +86,31 @@ function showResult(){
   const resultEl = document.getElementById('guessResult');
   const normalUsage = document.getElementById('normalUsage');
   const alexUsage = document.getElementById('alexUsage');
+  const alexWater = document.getElementById('alextank')
+  const normalWater = document.getElementById('normaltank')
+  const guessedWater = document.getElementById('guessedtank')
   resultEl.textContent = `You Guessed ${guessedAmount} liters`;
   alexUsage.textContent = `Alex Used ${alexAmount} liters`;
   normalUsage.textContent = `The correct amount is ${normalAmount} liters`;
 
   if(guessedAmount < normalAmount){
+    guessedWater.classList.add('smallest');
+    alexWater.classList.add('largest');
     console.log("Wow You guessed the lowest amount of water try again?");
+    
   } else if(guessedAmount === normalAmount){
+    alexWater.classList.add('largest');
     console.log("Wow You guessed the correct amount of water!");
+
   } else if(guessedAmount < alexAmount){
-    console.log("Alex used the most water")
+    alexWater.classList.add('largest');
+    normalWater.classList.add('smallest');
+    console.log("Alex used the most water");
+
   } else{
-    console.log("You guessed the most water used try again?")
+    guessedWater.classList.add('largest');
+    normalWater.classList.add('smallest');
+    console.log("You guessed the most water used try again?");
   }
 }
 document.addEventListener("DOMContentLoaded", function () {
