@@ -1,13 +1,12 @@
 
-section{
+.grid{
     display: grid;
     align-content: center;
     place-items: center;
     min-height: 105vh;
-
-    h2 {
-        margin-bottom: 2%;
-    };
+    &--watertank{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 
@@ -23,11 +22,16 @@ section{
 .bathroom {
     width: 100vw;
     height: 100vh;
-
-    h2 {
-        color:black;
-    }
 }
-.watertank{
-    grid-template-columns: 1fr 1fr 1fr;
+
+.flex{
+    display: flex;
+}
+.questions{
+    align-self: center;
+    flex: 0 1 500px;
+}
+.bathroom--container{
+    display: flex;
+    justify-content: flex-end;
 }

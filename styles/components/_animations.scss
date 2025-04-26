@@ -2,11 +2,8 @@
     0% {
         transform: translate(0, 0) scale(1);
     }
-    50% {
-        transform: translate(1690%, 1px) scale(70);
-    }
     100% {
-        transform: translate(0, 0) scale(1);
+        transform: translate(1690%, 1px) scale(70);
     }
 }
 
@@ -25,7 +22,8 @@
 
 .street{
     .animate{
-        animation: movezoom 15s ease-in-out forwards;  
+        animation: movezoom 15s ease-in-out forwards; 
+        animation-delay: 1s; 
     }
     &--house__1{
         transform: translate(0, 0) scale(1);

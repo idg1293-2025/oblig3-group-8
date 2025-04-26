@@ -9,17 +9,23 @@ $header-font: "Lucida Console", "Courier New", monospace;
 $regular-font: Arial, Helvetica, sans-serif;
 $text: white;
 
-h1,h2,h3 {
+h1{
     font-family: $header-font;
     color: $text;
+    font-size: clamp(26px, calc(1rem + 1vw), 70px);
+}
+
+button {
+    font-family: $regular-font;
 }
 
 p {
     font-family: $regular-font;
     color: $text;
+    font-size: clamp(14px, calc(1rem + 1vw), 28px);
 }
 
-.container {
+.hero {
     background: linear-gradient(rgba(6, 0, 37, 1) 60%, rgba(145, 152, 229, 1)) 100%;
 }
 .street{
@@ -27,13 +33,11 @@ p {
 }
 
 .questions {
-    
-    h3 {
-        color:black;
-    }
 
     p {
         color:black;
+        font-family: $header-font;
+        font-size: clamp(8px, calc(1rem + 1vw), 27px);
     }
 }
 

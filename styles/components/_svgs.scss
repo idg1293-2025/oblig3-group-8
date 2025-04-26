@@ -10,3 +10,28 @@ figure{
 .smallest{
     transform: scale(0.7);
 }
+.bathroom{
+    &--container{
+        width: 50%;
+        &__washing{
+            width: 50%;
+            padding-block-start: 5%;
+        }
+        &__shower{
+            width: 50%;
+            
+        }
+        &__bath{
+            width: 50%;
+            
+            padding-inline-end: 30%;
+            padding-block-start: 30%;
+        }
+        &__toilet{
+            width: 50%;
+            padding-inline-end: 20%;
+            padding-block-start: 30%;
+        }
+    }
+   
+}

@@ -8,7 +8,7 @@ const observer = new IntersectionObserver(elements => {
         }
     });
 }, {
-    threshold: 0.5 
+    threshold: 0.3 
 });
 
 hidden_elements.forEach(el => {
@@ -86,9 +86,11 @@ function showResult(){
   const resultEl = document.getElementById('guessResult');
   const normalUsage = document.getElementById('normalUsage');
   const alexUsage = document.getElementById('alexUsage');
-  const alexWater = document.getElementById('alextank')
-  const normalWater = document.getElementById('normaltank')
-  const guessedWater = document.getElementById('guessedtank')
+
+  const alexWater = document.getElementById('alextank');
+  const normalWater = document.getElementById('normaltank');
+  const guessedWater = document.getElementById('guessedtank');
+
   resultEl.textContent = `You Guessed ${guessedAmount} liters`;
   alexUsage.textContent = `Alex Used ${alexAmount} liters`;
   normalUsage.textContent = `The correct amount is ${normalAmount} liters`;
@@ -132,7 +134,13 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
     {
+ 
+
        // Adjust this based on when you want to trigger the animation
+ 
+
+       // Adjust this based on when you want to trigger the animation
+ 
     }
   );
 

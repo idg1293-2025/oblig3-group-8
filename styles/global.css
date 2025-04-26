@@ -1,11 +1,11 @@
-section {
+.grid {
   display: grid;
   align-content: center;
   place-items: center;
   min-height: 105vh;
 }
-section h2 {
-  margin-bottom: 2%;
+.grid--watertank {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .street {
@@ -20,12 +20,19 @@ section h2 {
   width: 100vw;
   height: 100vh;
 }
-.bathroom h2 {
-  color: black;
+
+.flex {
+  display: flex;
 }
 
-.watertank {
-  grid-template-columns: 1fr 1fr 1fr;
+.questions {
+  align-self: center;
+  flex: 0 1 500px;
+}
+
+.bathroom--container {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .button {
@@ -45,7 +52,7 @@ section h2 {
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: clamp(14px, 0.5rem + 1vw, 20px);
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
@@ -65,11 +72,8 @@ html, body {
   0% {
     transform: translate(0, 0) scale(1);
   }
-  50% {
-    transform: translate(1690%, 1px) scale(70);
-  }
   100% {
-    transform: translate(0, 0) scale(1);
+    transform: translate(1690%, 1px) scale(70);
   }
 }
 .hide {
@@ -87,6 +91,7 @@ html, body {
 
 .street .animate {
   animation: movezoom 15s ease-in-out forwards;
+  animation-delay: 1s;
 }
 .street--house__1 {
   transform: translate(0, 0) scale(1);
@@ -114,17 +119,44 @@ figure figcaption {
   transform: scale(0.7);
 }
 
-h1, h2, h3 {
+.bathroom--container {
+  width: 50%;
+}
+.bathroom--container__washing {
+  width: 50%;
+  padding-block-start: 5%;
+}
+.bathroom--container__shower {
+  width: 50%;
+}
+.bathroom--container__bath {
+  width: 50%;
+  padding-inline-end: 30%;
+  padding-block-start: 30%;
+}
+.bathroom--container__toilet {
+  width: 50%;
+  padding-inline-end: 20%;
+  padding-block-start: 30%;
+}
+
+h1 {
   font-family: "Lucida Console", "Courier New", monospace;
   color: white;
+  font-size: clamp(26px, 1rem + 1vw, 70px);
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
+  font-size: clamp(14px, 1rem + 1vw, 28px);
 }
 
-.container {
+.hero {
   background: linear-gradient(rgb(6, 0, 37) 60%, rgb(145, 152, 229)) 100%;
 }
 
@@ -132,11 +164,10 @@ p {
   background: linear-gradient(rgb(145, 152, 229) 60%, green) 100%;
 }
 
-.questions h3 {
-  color: black;
-}
 .questions p {
   color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: clamp(8px, 1rem + 1vw, 27px);
 }
 
 .bathroom {

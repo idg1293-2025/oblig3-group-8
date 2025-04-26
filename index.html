@@ -1,97 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex the water hoarder</title>
-    <link rel="stylesheet" href="styles/global.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alex the water hoarder</title>
+        <link rel="stylesheet" href="styles/global.css">
+    </head>
 
-<body>
-    <section class="container">
-        <h1 class="hide">Alex the water hoarder</h1>
-    </section>
-    <section class="street">
-        
-        <img class="hide street--house__2" src="images/house-1.svg" alt="yellow house">
-        <img class="street--house__1" src="images/alex-house.svg" alt="red house">
-        <img class="hide street--house__3" src="images/house-2.svg" alt="green house">
-    </section>
+    <body>
+        <section class="grid hero">
+            <h1 class="hide">Alex the water hoarder</h1>
+        </section>
+        <section class="grid street">
 
-    <section class="hide bathroom">
-        <div class="bathroom--container">
-        <h2>Bathroom</h2>
-        <img class="bathroom--container__bath" src="images/alex-showering-grouped.svg" alt="bathtub with a person inside">
-        </div>
-        <div></div>
-    </section>
-<section class="hide bathroom">
-    <div>
-        <img src="images/alex-standing.svg" alt="Alex Standing">
-        <img src="images/alex-showering-grouped.svg" alt="">
-    </div>
-</section>
+            <img class="street--house__2" src="images/house-1.svg"
+                alt="yellow house">
+            <img class="street--house__1" src="images/alex-house.svg"
+                alt="red house">
+            <img class="street--house__3" src="images/house-2.svg"
+                alt="green house">
+        </section>
 
+        <section class="hide bathroom flex">
+            <div class="bathroom--container">
+                <img class="bathroom--container__shower"
+                    src="images/alex-shower.svg" alt="Alex Standing">
+            </div>
+            <div class="questions">
+                <p class="questions--1">How many liters does a 10 minute Shower
+                    use?</p>
+                <div class="button">
+                    <button>120 liters</button>
+                    <button>160 liters</button>
+                    <button>250 liters</button>
+                    <button>200 liters</button>
+                </div>
+            </div>
+        </section>
+        <section class="bathroom flex">
+            <div class="questions">
+                <p class="questions--2">How many liters does a Toilet use per
+                    flush?</p>
+                <div class="button">
+                    <button>12 liters</button>
+                    <button>3 liters</button>
+                    <button>6 liters</button>
+                    <button>20 liters</button>
+                </div>
+            </div>
+            <div class="hide bathroom--container">
+                <img class="bathroom--container__toilet"
+                    src="images/alex-toilet.svg" alt="person on the toilet">
+            </div>
+            
 
-    <section class="hide questions">
-        
-        <h2>Quiz</h2> <!-- Unsure if we are keeping this. -->
+        </section>
 
-        <h3 class="questions--1">How many liters does a 10 minute Shower use?</h3>
-        <div class="button">
-        <button>120 liters</button>
-        <button>160 liters</button>
-        <button>250 liters</button>
-        <button>200 liters</button>
-        </div>
+        <section class="bathroom flex">
+<div class="questions">
+                <p class="questions--3">How many liters does a bath use?</p>
+                <div class="button">
+                    <button>400 liters</button>
+                    <button>200 liters</button>
+                    <button>350 liters</button>
+                    <button>300 liters</button>
+                </div>
+            </div>
+            <div class="hide bathroom--container">
+                <img class="bathroom--container__bath"
+                    src="images/alex-showering-grouped.svg"
+                    alt="bathtub with a person inside">
+            </div>
 
-        <h3 class="questions--2">How many liters does a Toilet use per flush?</h3>
-        <div class="button">
-        <button>12 liters</button>
-        <button>3 liters</button>
-        <button>6 liters</button>
-        <button>20 liters</button>
-        </div>
+            
 
-        <h3 class="questions--3">How many liters does a bath use?</h3>
-        <div class="button">
-        <button>400 liters</button>
-        <button>350 liters</button>
-        <button>300 liters</button>
-        <button>200 liters</button>
-        </div>
+        </section>
 
-        <h3 class="questions--4">How many liters does a washing machine use per cycle?</h3>
-        <div class="button">
-        <button>40 liters</button>
-        <button>50 liters</button>
-        <button>80 liters</button>
-        <button>30 liters</button>
-        </div>
-    </section>
-    <section class="hide watertank">
-        
+        <section class="bathroom flex">
+            <div class="hide bathroom--container">
+                <img class="bathroom--container__washing"
+                    src="images/alex-washing-machine.svg"
+                    alt="person trying to wash clothes">
+            </div>
+            <div class="questions">
+                <p class="questions--4">How many liters does a washing machine
+                    use
+                    per cycle?</p>
+                <div class="button">
+                    <button>40 liters</button>
+                    <button>50 liters</button>
+                    <button>80 liters</button>
+                    <button>30 liters</button>
+                </div>
+            </div>
+        </section>
+        <section class="hide grid grid--watertank">
+
             <figure>
-                <img id="guessedtank" src="/images/water-tank.svg" alt="Guessed Water tank">
+                <img id="guessedtank" src="/images/water-tank.svg"
+                    alt="Guessed Water tank">
                 <figcaption id="guessResult"></figcaption>
             </figure>
-       
+
             <figure>
-                <img id="alextank" src="images/water-tank.svg" alt="Alex's Water Usage">
+                <img id="alextank" src="images/water-tank.svg"
+                    alt="Alex's Water Usage">
                 <figcaption id="alexUsage"></figcaption>
             </figure>
-       
+
             <figure>
-                <img id="normaltank" src="images/water-tank.svg" alt="The normal water usage">
+                <img id="normaltank" src="images/water-tank.svg"
+                    alt="The normal water usage">
                 <figcaption id="normalUsage"></figcaption>
             </figure>
-        
-    </section>
-    <section class="hide">
 
-    </section>
-    <script src="script.js" defer></script>
-</body>
+        </section>
+        <section class="hide">
+
+        </section>
+        <script src="script.js" defer></script>
+    </body>
 
 </html>
