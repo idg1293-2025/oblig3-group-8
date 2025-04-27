@@ -63,8 +63,71 @@
 }
 
 html, body {
-  height: 100%;
   font-size: 100%;
+}
+
+figure {
+  width: 15vw;
+}
+figure figcaption {
+  margin-top: 20%;
+}
+
+.largest {
+  transform: scale(1.3);
+}
+
+.smallest {
+  transform: scale(0.7);
+}
+
+.bathroom--container {
+  width: 50%;
+}
+.bathroom--container__washing {
+  width: 50%;
+  padding-block-start: 5%;
+}
+.bathroom--container__shower {
+  width: 50%;
+}
+.bathroom--container__bath {
+  width: 50%;
+  padding-inline-end: 30%;
+  padding-block-start: 30%;
+}
+.bathroom--container__toilet {
+  width: 50%;
+  padding-inline-end: 20%;
+  padding-block-start: 30%;
+}
+
+.water--meter {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.water--meter__sticky {
+  width: 8%;
+  position: sticky;
+  top: 10%;
+  left: 90%;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.water--meter__sticky-hidden {
+  opacity: 0;
+}
+.water--meter__level {
+  position: absolute;
+  width: auto;
+  height: 0px;
+  bottom: 13%;
+  z-index: -1;
+}
+.water--meter__tank {
+  z-index: 1;
 }
 
 @keyframes movezoom {
@@ -103,31 +166,22 @@ html, body {
 
 }
 */
-figure {
-  width: 15vw;
-}
-figure figcaption {
-  margin-top: 20%;
+.water--meter__level {
+  transition: height 0.5s ease, width 0.5s ease;
 }
 
-.largest {
-  transform: scale(1.3);
+.stage-0 {
+  height: 21%;
 }
-
-.smallest {
-  transform: scale(0.7);
+.stage-1 {
+  height: 34%;
 }
-
-.bathroom--container {
-  width: 50%;
+.stage-2 {
+  height: 50%;
 }
-.bathroom--container__washing {
-  width: 50%;
-  padding-block-start: 5%;
-}
-.bathroom--container__shower {
-  width: 50%;
-}
+Filling-watertank
+.stage-3 {
+  height: 92%;
 .bathroom--container__bath {
   width: 50%;
   padding-inline-end: 30%;
@@ -137,6 +191,7 @@ figure figcaption {
   width: 30%;
   padding-inline-end: 20%;
   padding-block-start: 30%;
+
 }
 
 .water--container__wave,
