@@ -1,7 +1,25 @@
 
 .water--container__wave,
 .water--container__water {
-  display: block;
+  display: block; // Had to use block otherwise a space between the two would be there.
   margin: 0;
   padding: 0;
+}
+
+@keyframes moveWave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.water--container__wave {
+  margin: 0;
+  padding: 0;
+  animation: moveWave 2s infinite ease-in-out;
 }
