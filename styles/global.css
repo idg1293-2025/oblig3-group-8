@@ -172,7 +172,7 @@ p {
 
 .bathroom {
   background-image: url(../../images/room.svg);
-  background-size: 100vw;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }/*# sourceMappingURL=global.css.map */

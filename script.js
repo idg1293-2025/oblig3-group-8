@@ -115,35 +115,16 @@ function showResult(){
     console.log("You guessed the most water used try again?");
   }
 }
-document.addEventListener("DOMContentLoaded", function () {
-  // Target the element you want to animate
-  const target = document.querySelector(".street--house__1");
+const target = document.querySelector(".street--house__1");
 
-  // Create the intersection observer
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Add animation class when the element is in view
-          target.classList.add("animate");
-          // Stop observing once animation is triggered
-          
-        }else {
-          target.classList.remove("animate");
-        }
-      });
-    },
-    {
- 
+    // Start observing the target element without a separate `observer` variable
+    new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                target.classList.add("animate");
+            } else {
+                target.classList.remove("animate");
+            }
+        });
+    }).observe(target);
 
-       // Adjust this based on when you want to trigger the animation
- 
-
-       // Adjust this based on when you want to trigger the animation
- 
-    }
-  );
-
-  // Start observing the target element
-  observer.observe(target);
-});
