@@ -97,7 +97,7 @@ figure figcaption {
   padding-block-start: 30%;
 }
 .bathroom--container__toilet {
-  width: 50%;
+  width: 30%;
   padding-inline-end: 20%;
   padding-block-start: 30%;
 }
@@ -179,19 +179,8 @@ figure figcaption {
 .stage-2 {
   height: 50%;
 }
-Filling-watertank
 .stage-3 {
   height: 92%;
-.bathroom--container__bath {
-  width: 50%;
-  padding-inline-end: 30%;
-  padding-block-start: 30%;
-}
-.bathroom--container__toilet {
-  width: 30%;
-  padding-inline-end: 20%;
-  padding-block-start: 30%;
-
 }
 
 .water--container__wave,
