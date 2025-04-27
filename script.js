@@ -65,6 +65,8 @@ questionGroups.forEach(function(question, i) {
       const correctAnswer = waterQuiz[i].answer;
       guessedAmount += clickedValue;
 
+      updateWaterTank(questionCount);
+
       if (clickedValue === correctAnswer) {
         button.classList.add("correct");
         score++;
@@ -115,6 +117,17 @@ function showResult(){
     console.log("You guessed the most water used try again?");
   }
 }
+
+function updateWaterTank(index){
+  const waterTank = document.getElementById('water-level');
+
+  waterTank.classList.remove('stage-0', 'stage-1', 'stage-2', 'stage-3', 'stage-4');
+
+  waterTank.classList.add('stage-' + index);
+}
+
+
+
 const target = document.querySelector(".street--house__1");
 
     // Start observing the target element without a separate `observer` variable

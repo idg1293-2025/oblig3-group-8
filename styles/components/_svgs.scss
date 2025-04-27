@@ -35,3 +35,18 @@ figure{
     }
    
 }
+.water--meter{
+    width: 20%;
+    position: relative;
+    overflow: hidden;
+    &__level{
+        position: absolute;
+        width: auto;
+        height: 0px;
+        bottom: 13%;
+        z-index: -1;
+    }
+    &__tank {
+        z-index: 1;
+    }
+}

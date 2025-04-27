@@ -2,8 +2,9 @@
 @use "layout/container";
 @use "components/button";
 @use "_reset.scss";
-@use "components/animations";
 @use "components/svgs";
+@use "components/animations";
+
 
 $header-font: "Lucida Console", "Courier New", monospace;
 $regular-font: Arial, Helvetica, sans-serif;
