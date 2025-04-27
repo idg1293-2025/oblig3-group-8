@@ -52,7 +52,7 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: clamp(14px, 0.5rem + 1vw, 20px);
+  font-size: clamp(12px, 0.3rem + 0.8vw, 18px);
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
@@ -167,7 +167,7 @@ p {
 .questions p {
   color: black;
   font-family: "Lucida Console", "Courier New", monospace;
-  font-size: clamp(8px, 1rem + 1vw, 27px);
+  font-size: clamp(5px, 0.5rem + 1vw, 25px);
 }
 
 .bathroom {
