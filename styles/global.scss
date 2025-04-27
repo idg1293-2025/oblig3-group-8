@@ -4,7 +4,7 @@
 @use "_reset.scss";
 @use "components/svgs";
 @use "components/animations";
-
+@use "components/wave";
 
 $header-font: "Lucida Console", "Courier New", monospace;
 $regular-font: Arial, Helvetica, sans-serif;
@@ -34,11 +34,11 @@ p {
 }
 
 .questions {
-
     p {
         color:black;
         font-family: $header-font;
-        font-size: clamp(8px, calc(1rem + 1vw), 27px);
+        background-color: rgb(255, 255, 255, 0.8);
+        font-size: clamp(5px, calc(0.5rem + 1vw), 25px);
     }
 }
 
@@ -47,5 +47,4 @@ p {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
 }

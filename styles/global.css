@@ -17,22 +17,21 @@
 }
 
 .bathroom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  place-items: center;
+  justify-content: space-around;
   width: 100vw;
-  height: 100vh;
+  height: 105vh;
 }
-
-.flex {
-  display: flex;
+.bathroom--conatiner {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .questions {
-  align-self: center;
-  flex: 0 1 500px;
-}
-
-.bathroom--container {
-  display: flex;
-  justify-content: flex-end;
+  margin-inline: 30%;
 }
 
 .button {
@@ -52,7 +51,7 @@
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: clamp(14px, 0.5rem + 1vw, 20px);
+  font-size: clamp(12px, 0.3rem + 0.8vw, 18px);
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
@@ -180,8 +179,43 @@ figure figcaption {
 .stage-2 {
   height: 50%;
 }
+Filling-watertank
 .stage-3 {
   height: 92%;
+.bathroom--container__bath {
+  width: 50%;
+  padding-inline-end: 30%;
+  padding-block-start: 30%;
+}
+.bathroom--container__toilet {
+  width: 30%;
+  padding-inline-end: 20%;
+  padding-block-start: 30%;
+
+}
+
+.water--container__wave,
+.water--container__water {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moveWave {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.water--container__wave {
+  margin: 0;
+  padding: 0;
+  animation: moveWave 2s infinite ease-in-out;
 }
 
 h1 {
@@ -211,7 +245,8 @@ p {
 .questions p {
   color: black;
   font-family: "Lucida Console", "Courier New", monospace;
-  font-size: clamp(8px, 1rem + 1vw, 27px);
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(5px, 0.5rem + 1vw, 25px);
 }
 
 .bathroom {
