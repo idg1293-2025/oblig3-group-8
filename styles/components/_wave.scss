@@ -1,25 +1,23 @@
 
-.water--container__wave,
-.water--container__water {
-  display: block; // Had to use block otherwise a space between the two would be there.
-  margin: 0;
-  padding: 0;
-}
-
 @keyframes moveWave {
   0% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(50px);
+    transform: translateY(10px);
   }
   100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
 }
 
-.water--container__wave {
+.water--container {
   margin: 0;
   padding: 0;
   animation: moveWave 2s infinite ease-in-out;
+  &__wave{
+    $gradient-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    
+    mask-image: $gradient-mask;
+  }
 }

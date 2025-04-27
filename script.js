@@ -1,11 +1,7 @@
 const hidden_elements = document.querySelectorAll('.hide');
 const observer = new IntersectionObserver(elements => {
     elements.forEach(element => {
-        if (element.isIntersecting) {
-            element.target.classList.add('show');
-        } else {
-            element.target.classList.remove('show');
-        }
+        element.target.classList.toggle("show", element.isIntersecting)
     });
 }, {
     threshold: 0.3 
@@ -120,8 +116,8 @@ function showResult(){
 
 function updateWaterTank(index){
   const waterTank = document.getElementById('water-level');
-
-  waterTank.classList.remove('stage-0', 'stage-1', 'stage-2', 'stage-3', 'stage-4');
+  
+  waterTank.classList.remove('stage-0', 'stage-1', 'stage-2', 'stage-3');
 
   waterTank.classList.add('stage-' + index);
 }

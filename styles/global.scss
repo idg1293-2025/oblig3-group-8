@@ -25,7 +25,9 @@ p {
     color: $text;
     font-size: clamp(14px, calc(1rem + 1vw), 28px);
 }
-
+figcaption{
+    font-family: $regular-font;
+}
 .hero {
     background: linear-gradient(rgba(6, 0, 37, 1) 60%, rgba(145, 152, 229, 1)) 100%;
 }
