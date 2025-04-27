@@ -20,18 +20,19 @@
 }
 
 .bathroom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    place-items: center;
+    justify-content: space-around;
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
+    &--conatiner{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
 }
 
-.flex{
-    display: flex;
-}
 .questions{
-    align-self: center;
-    flex: 0 1 500px;
-}
-.bathroom--container{
-    display: flex;
-    justify-content: flex-end;
+    margin-inline: 30%;
 }

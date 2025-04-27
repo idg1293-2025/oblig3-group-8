@@ -17,22 +17,21 @@
 }
 
 .bathroom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  place-items: center;
+  justify-content: space-around;
   width: 100vw;
-  height: 100vh;
+  height: 105vh;
 }
-
-.flex {
-  display: flex;
+.bathroom--conatiner {
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 .questions {
-  align-self: center;
-  flex: 0 1 500px;
-}
-
-.bathroom--container {
-  display: flex;
-  justify-content: flex-end;
+  margin-inline: 30%;
 }
 
 .button {
@@ -135,9 +134,16 @@ figure figcaption {
   padding-block-start: 30%;
 }
 .bathroom--container__toilet {
-  width: 50%;
+  width: 30%;
   padding-inline-end: 20%;
   padding-block-start: 30%;
+}
+
+.water--container__wave,
+.water--container__water {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -168,6 +174,7 @@ p {
   color: black;
   font-family: "Lucida Console", "Courier New", monospace;
   font-size: clamp(8px, 1rem + 1vw, 27px);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .bathroom {
