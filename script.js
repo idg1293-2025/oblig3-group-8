@@ -141,3 +141,22 @@ const target = document.querySelector(".street--house__1");
         });
     }).observe(target);
 
+    const stickyElement = document.querySelector(".water--meter__sticky");
+    const targetSection = document.querySelector(".grid--watertank"); // Adjust selector for your section
+  
+    const sticky = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            stickyElement.classList.remove("show"); // Remove the 'show' class when intersecting
+          } else {
+            stickyElement.classList.add("show"); // Add the 'show' class when not intersecting
+          }
+        });
+      },
+      {
+        threshold: 0, // Trigger when even a tiny part of the section is in view
+      }
+    );
+    
+    sticky.observe(targetSection);
