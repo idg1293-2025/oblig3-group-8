@@ -361,7 +361,7 @@ figcaption {
 }
 
 .bathroom {
-  background-image: url(../../images/room.svg);
+  background-image: url(images/room.svg);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

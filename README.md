@@ -32,7 +32,7 @@ The first is the main observer used in the section tags that triggers once they 
 
 The second use of observer is to animate the house after the original hero section of the page to give the zoom effect into the house by just zooming into the SVG after it comes into view
 
-The third is the use of the filling water tank to display the characters usage of water throughout the different quiz questions. Then later hiding it again after you get to the end of the quiz / story.
+The third is the use of the filling water tank to display the characters usage of water throughout the different quiz questions. Then later hiding it again after you get to the end of the quiz / story. Then we added a spil animation to tip the water tank, a script that removes the item from veiwport.
 
 In terms of interactions the main interactive part of the site is the quiz that askes how much different activities use in terms of liters of water. By grabbing the numbers directly from the buttons and comparing them to the quiz object inside the script to validate the users answers and log the result later in the script and depending of the result of that scaling up or down the different tanks to visualize the difference.
 
