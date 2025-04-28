@@ -12,6 +12,7 @@ $regular-font: Arial, Helvetica, sans-serif;
 $light-text: white;
 $dark-text: black;
 
+//font styling and sizing.
 h1{
     font-family: $header-font;
     color: $light-text;
@@ -30,6 +31,7 @@ p {
 figcaption{
     font-family: $regular-font;
 }
+//linear gradient for the background color
 .hero {
     background: linear-gradient(rgba(6, 0, 37, 1) 60%, rgba(145, 152, 229, 1)) 100%;
 }
