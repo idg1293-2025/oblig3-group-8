@@ -55,3 +55,27 @@ figcaption{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.endText {
+
+    mark {
+        background-color: rgb(110, 255, 110);
+    }
+    a {
+        color:green;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: clamp(4px, calc(0.5rem + 1vw), 26px);
+    }
+
+    h3 {
+        font-size: clamp(4px, calc(0.5rem + 1vw), 24px);
+    }
+    p {
+        color:$dark-text;
+        font-size: clamp(4px, calc(0.5rem + 1vw), 18px);
+    }
+} 

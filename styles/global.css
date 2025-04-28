@@ -37,6 +37,16 @@
   margin-inline: 30%;
 }
 
+.endText {
+  text-align: center;
+}
+.endText p, .endText h2 {
+  margin: 1% 0 1% 0;
+}
+.endText h3 {
+  margin-top: 2%;
+}
+
 .button {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -251,4 +261,23 @@ figcaption {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.endText mark {
+  background-color: rgb(110, 255, 110);
+}
+.endText a {
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+}
+.endText h2 {
+  font-size: clamp(4px, 0.5rem + 1vw, 26px);
+}
+.endText h3 {
+  font-size: clamp(4px, 0.5rem + 1vw, 24px);
+}
+.endText p {
+  color: black;
+  font-size: clamp(4px, 0.5rem + 1vw, 18px);
 }/*# sourceMappingURL=global.css.map */
