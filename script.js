@@ -61,6 +61,7 @@ questionGroups.forEach(function(question, i) {
       const correctAnswer = waterQuiz[i].answer;
       guessedAmount += clickedValue;
 
+      // Calling Watertank to give the correct amount compared to the questions answered
       updateWaterTank(questionCount);
 
       if (clickedValue === correctAnswer) {
@@ -93,6 +94,7 @@ function showResult(){
   alexUsage.textContent = `Alex Used ${alexAmount} liters`;
   normalUsage.textContent = `The correct amount is ${normalAmount} liters`;
 
+  // Giving class depending on which value is the largest and smallest
   if(guessedAmount < normalAmount){
     guessedWater.classList.add('smallest');
     alexWater.classList.add('largest');
@@ -126,7 +128,7 @@ function updateWaterTank(index){
 
 const target = document.querySelector(".street--house__1");
 
-    // Start observing the target element without a separate `observer` variable
+    // Start observing the target element without a separate `observer` variable and adding animation when it comes into frame
     new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -138,20 +140,21 @@ const target = document.querySelector(".street--house__1");
     }).observe(target);
 
     const stickyElement = document.querySelector(".water--meter__sticky");
-    const targetSection = document.querySelector(".grid--watertank"); // Adjust selector for your section
+    const targetSection = document.querySelector(".grid--watertank"); 
   
     const sticky = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            stickyElement.classList.remove("show"); // Remove the 'show' class when intersecting
+            stickyElement.classList.remove("show"); // Removes 'show' class when intersecting final quiz result
           } else {
-            stickyElement.classList.add("show"); // Add the 'show' class when not intersecting
+            stickyElement.classList.add("show"); // Add 'show' class when it's not intersecting
           }
         });
       },
       {
-        threshold: 0, // Trigger when even a tiny part of the section is in view
+        // Remove as soon as result comes into view
+        threshold: 0, 
       }
     );
     
