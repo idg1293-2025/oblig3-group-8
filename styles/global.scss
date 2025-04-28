@@ -1,0 +1,82 @@
+@use "layout/layout";
+@use "components/button";
+@use "_reset.scss";
+@use "components/svgs";
+@use "components/wave";
+@use "components/animations";
+
+
+// Font related variables
+$header-font: "Lucida Console", "Courier New", monospace;
+$regular-font: Arial, Helvetica, sans-serif;
+$light-text: white;
+$dark-text: black;
+
+//font styling and sizing.
+h1{
+    font-family: $header-font;
+    color: $light-text;
+    font-size: clamp(26px, calc(1rem + 1vw), 70px);
+}
+
+button {
+    font-family: $regular-font;
+}
+
+p {
+    font-family: $regular-font;
+    color: $light-text;
+    font-size: clamp(14px, calc(1rem + 1vw), 28px);
+}
+figcaption{
+    font-family: $regular-font;
+}
+//linear gradient for the background color
+.hero {
+    background: linear-gradient(rgba(6, 0, 37, 1) 60%, rgba(145, 152, 229, 1)) 100%;
+}
+.street{
+    background: linear-gradient(rgb(145, 152, 229, 1) 60%, green) 100%;
+}
+
+.questions{
+    p {
+        color:$dark-text;
+        font-family: $header-font;
+        background-color: rgb(255, 255, 255, 0.8);
+        font-size: clamp(5px, calc(0.5rem + 1vw), 25px); // Clamp to make it responsive.
+    }
+}
+
+// Adds the room.svg as a background element, which then we place alex and whatever he's doing infront along with the questions.
+.bathroom {
+    background-image: url(../images/room.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer {
+    background-color: rgb(33, 44, 255);
+    a {
+        color:rgb(110, 255, 110);
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
+    h2 {
+        font-size: clamp(4px, calc(0.5rem + 1vw), 26px);
+        color:$light-text;
+        font-family: $header-font;
+    }
+
+    h3 {
+        color:$light-text;
+        font-size: clamp(4px, calc(0.5rem + 1vw), 24px);
+        font-family: $header-font;
+    }
+    p {
+        color:$light-text;
+        font-size: clamp(4px, calc(0.5rem + 1vw), 18px);
+    }
+} 

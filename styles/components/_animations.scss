@@ -1,0 +1,137 @@
+//animation for the red house
+@keyframes movezoom {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(1690%, 1px) scale(70);
+    }
+}
+
+//animation for all the hide classes and js script
+.hide {
+    transition: all 1s;
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(200px);
+};
+
+//show class and animation.
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+};
+
+//how the animation is apearing and duration
+.street{
+    .animate{
+        animation: movezoom 15s ease-in-out forwards; 
+        animation-delay: 1s; 
+    }
+    &--house__1{
+        transform: translate(0, 0) scale(1);
+        z-index: 3;
+    }
+}
+
+
+
+
+
+//animation to be called by js
+.water--meter__level {
+    transition: height 0.5s ease, width 0.5s ease;
+   
+}
+.stage{
+    &-0{
+        height: 21%;
+    }
+    &-1{
+        height: 34%;
+    }    
+    &-2{
+        height: 50%;
+    }    
+    &-3{
+        height: 92%;
+        transition: height 3s ease, width 3s ease;
+        
+    }
+}
+@keyframes shake {
+    0%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-15deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes spil {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+.shake{
+    animation: shake 1.5s  ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+.spil{
+    animation: spil 0.5s ease forwards;
+    z-index: -1;
+}
+@media (prefers-reduced-motion) {
+    .hide, .show{
+        transition: 2s;
+        filter: none;
+    }
+    .hide{
+        transform: translateY(100px);
+    }
+    .water--meter__level{
+        transition: height 2.5s ease-in, width 2.5s ease-in;
+    }
+    .spil{
+        animation: spil 2.5s ease forwards;
+    }
+
+    .water--container__alex {
+        animation:moveWave 4s infinite ease-in-out;
+    }
+
+    @keyframes shake {
+        0%{
+            transform: rotate(0deg);
+        }
+        25%{
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+        100%{
+            transform: rotate(0deg);
+        }
+    }
+    .shake{
+        animation: shake 3.5s   infinite;
+    }
+    .water--container{
+        animation: moveWave 5s infinite;
+    }
+    .street{
+        .animate{
+            animation: movezoom 40s ease-in-out forwards;  
+        }
+    }
+}

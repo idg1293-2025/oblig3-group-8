@@ -1,0 +1,78 @@
+figure{
+    width: 15vw;
+    figcaption{
+        margin-top: 20%;
+    }
+}
+// change the scale of the water tank in accordance with the script code
+.largest{
+    transform: scale(1.3);
+}
+.smallest{
+    transform: scale(0.7);
+}
+.bathroom{
+    &--container{
+        width: 50%;
+        //placement of the svg files for the story
+        &__washing{
+            position: relative;
+            left: 6vw;
+            top: 5vh;
+        }
+        &__shower{
+            position: relative;
+            left: 2vw;
+            top: 9vh;
+        }
+        &__bath{
+            position: relative;
+            left: -1vw;
+            top: 9vh;
+        }
+            
+        &__toilet{
+            width: 50%;
+            position: relative;
+            left: -16vw;
+            top: 8.7vh;
+        }
+    }
+   
+}
+//placememnt and oferlow hidden to stop the water going outside of the container.
+.water--meter{
+    &__container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    }
+    &__sticky{
+        width: 8%;
+        position: sticky;
+        top: 10%;
+        left: 90%;
+        z-index: 1;
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+        &-hidden{
+            opacity: 0;
+        }
+    }
+    &__level{
+        position: absolute;
+        width: auto;
+        height: 0px;
+        bottom: 13%;
+        z-index: -1;
+    }
+    &__tank {
+        z-index: 1;
+    }
+}
+@media (max-width: 800px) {
+    .water--meter__sticky{
+        width: 15%;
+        top: 80%;
+    }
+}

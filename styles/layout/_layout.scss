@@ -1,0 +1,72 @@
+
+//Grid layout for the heading and bottom
+.grid{
+    display: grid;
+    align-content: center;
+    place-items: center;
+    min-height: 105vh;
+    &--watertank{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+//grid layout for the houses
+.street{
+    grid-template-columns: 1fr 1fr 1fr;
+    top: 0;
+    overflow: hidden;
+    height: 120vh;
+    width: 100vw;
+}
+
+//grid layout for the bahtroom sections and flex for the svgs.
+.bathroom {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    place-items: center;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    gap: 20px; 
+}
+
+.bathroom--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.questions{
+    margin-inline: 30%;
+}
+
+//footer grid layout
+.footer {
+    margin: 0 5% 2% 5%;
+    padding: 2%;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    text-align: center;
+
+    &--container {
+        padding-block: 3%;
+        display: grid;
+        text-align: start;
+        width: 80%;
+        gap: 0.5rem;
+       grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+        
+        max-width: 100%;
+         
+        width: 300px;
+        border-radius: 3px;
+    }
+}
+

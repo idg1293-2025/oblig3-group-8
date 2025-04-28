@@ -1,0 +1,391 @@
+.grid {
+  display: grid;
+  align-content: center;
+  place-items: center;
+  min-height: 105vh;
+}
+.grid--watertank {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.street {
+  grid-template-columns: 1fr 1fr 1fr;
+  top: 0;
+  overflow: hidden;
+  height: 120vh;
+  width: 100vw;
+}
+
+.bathroom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  place-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+}
+
+.bathroom--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.questions {
+  margin-inline: 30%;
+}
+
+.footer {
+  margin: 0 5% 2% 5%;
+  padding: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  text-align: center;
+}
+.footer--container {
+  padding-block: 3%;
+  display: grid;
+  text-align: start;
+  width: 80%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
+}
+.footer img {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 3px;
+}
+
+.button {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 1rem;
+  margin-block: 1rem;
+}
+.button .false {
+  background-color: red;
+}
+.button .correct {
+  background-color: forestgreen;
+}
+.button button {
+  background-color: #867863;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: clamp(12px, 0.3rem + 0.8vw, 18px);
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-size: 100%;
+}
+
+figure {
+  width: 15vw;
+}
+figure figcaption {
+  margin-top: 20%;
+}
+
+.largest {
+  transform: scale(1.3);
+}
+
+.smallest {
+  transform: scale(0.7);
+}
+
+.bathroom--container {
+  width: 50%;
+}
+.bathroom--container__washing {
+  position: relative;
+  left: 6vw;
+  top: 5vh;
+}
+.bathroom--container__shower {
+  position: relative;
+  left: 2vw;
+  top: 9vh;
+}
+.bathroom--container__bath {
+  position: relative;
+  left: -1vw;
+  top: 9vh;
+}
+.bathroom--container__toilet {
+  width: 50%;
+  position: relative;
+  left: -16vw;
+  top: 8.7vh;
+}
+
+.water--meter__container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.water--meter__sticky {
+  width: 8%;
+  position: sticky;
+  top: 10%;
+  left: 90%;
+  z-index: 1;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.water--meter__sticky-hidden {
+  opacity: 0;
+}
+.water--meter__level {
+  position: absolute;
+  width: auto;
+  height: 0px;
+  bottom: 13%;
+  z-index: -1;
+}
+.water--meter__tank {
+  z-index: 1;
+}
+
+@media (max-width: 800px) {
+  .water--meter__sticky {
+    width: 15%;
+    top: 80%;
+  }
+}
+@keyframes moveWave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.water--container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  animation: moveWave 2s infinite ease-in-out;
+}
+.water--container__alex {
+  position: absolute;
+  z-index: 0;
+  height: 15%;
+  left: 35%;
+  top: 2%;
+}
+.water--container p {
+  position: absolute;
+  margin-inline-start: 5%;
+  z-index: 1;
+}
+.water--container p:nth-child(3) {
+  top: 20%;
+}
+.water--container p:nth-child(4) {
+  top: 40%;
+}
+.water--container__wave {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
+@keyframes movezoom {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(1690%, 1px) scale(70);
+  }
+}
+.hide {
+  transition: all 1s;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateY(200px);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+.street .animate {
+  animation: movezoom 15s ease-in-out forwards;
+  animation-delay: 1s;
+}
+.street--house__1 {
+  transform: translate(0, 0) scale(1);
+  z-index: 3;
+}
+
+.water--meter__level {
+  transition: height 0.5s ease, width 0.5s ease;
+}
+
+.stage-0 {
+  height: 21%;
+}
+.stage-1 {
+  height: 34%;
+}
+.stage-2 {
+  height: 50%;
+}
+.stage-3 {
+  height: 92%;
+  transition: height 3s ease, width 3s ease;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spil {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+.shake {
+  animation: shake 1.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.spil {
+  animation: spil 0.5s ease forwards;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion) {
+  .hide, .show {
+    transition: 2s;
+    filter: none;
+  }
+  .hide {
+    transform: translateY(100px);
+  }
+  .water--meter__level {
+    transition: height 2.5s ease-in, width 2.5s ease-in;
+  }
+  .spil {
+    animation: spil 2.5s ease forwards;
+  }
+  .water--container__alex {
+    animation: moveWave 4s infinite ease-in-out;
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .shake {
+    animation: shake 3.5s infinite;
+  }
+  .water--container {
+    animation: moveWave 5s infinite;
+  }
+  .street .animate {
+    animation: movezoom 40s ease-in-out forwards;
+  }
+}
+h1 {
+  font-family: "Lucida Console", "Courier New", monospace;
+  color: white;
+  font-size: clamp(26px, 1rem + 1vw, 70px);
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-size: clamp(14px, 1rem + 1vw, 28px);
+}
+
+figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero {
+  background: linear-gradient(rgb(6, 0, 37) 60%, rgb(145, 152, 229)) 100%;
+}
+
+.street {
+  background: linear-gradient(rgb(145, 152, 229) 60%, green) 100%;
+}
+
+.questions p {
+  color: black;
+  font-family: "Lucida Console", "Courier New", monospace;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: clamp(5px, 0.5rem + 1vw, 25px);
+}
+
+.bathroom {
+  background-image: url(../images/room.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer {
+  background-color: rgb(33, 44, 255);
+}
+.footer a {
+  color: rgb(110, 255, 110);
+  text-decoration: underline;
+  font-weight: bold;
+}
+.footer h2 {
+  font-size: clamp(4px, 0.5rem + 1vw, 26px);
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.footer h3 {
+  color: white;
+  font-size: clamp(4px, 0.5rem + 1vw, 24px);
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+.footer p {
+  color: white;
+  font-size: clamp(4px, 0.5rem + 1vw, 18px);
+}/*# sourceMappingURL=global.css.map */
