@@ -265,12 +265,12 @@ figcaption {
   font-weight: bold;
 }
 .endText h2 {
-  font-size: clamp(14px, 1rem + 1vw, 26px);
+  font-size: clamp(4px, 0.5rem + 1vw, 26px);
 }
 .endText h3 {
-  font-size: clamp(14px, 1rem + 1vw, 24px);
+  font-size: clamp(4px, 0.5rem + 1vw, 24px);
 }
 .endText p {
   color: black;
-  font-size: clamp(14px, 1rem + 1vw, 18px);
+  font-size: clamp(4px, 0.5rem + 1vw, 18px);
 }/*# sourceMappingURL=global.css.map */

@@ -66,14 +66,14 @@ figcaption{
     }
 
     h2 {
-        font-size: clamp(14px, calc(1rem + 1vw), 26px);
+        font-size: clamp(4px, calc(0.5rem + 1vw), 26px);
     }
 
     h3 {
-        font-size: clamp(14px, calc(1rem + 1vw), 24px);
+        font-size: clamp(4px, calc(0.5rem + 1vw), 24px);
     }
     p {
         color:$dark-text;
-        font-size: clamp(14px, calc(1rem + 1vw), 18px);
+        font-size: clamp(4px, calc(0.5rem + 1vw), 18px);
     }
 } 
