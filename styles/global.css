@@ -256,6 +256,14 @@ figcaption {
   background-position: center;
 }
 
+.endText mark {
+  background-color: rgb(110, 255, 110);
+}
+.endText a {
+  color: green;
+  text-decoration: underline;
+  font-weight: bold;
+}
 .endText h2 {
   font-size: clamp(14px, 1rem + 1vw, 26px);
 }

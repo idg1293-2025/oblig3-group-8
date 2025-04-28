@@ -56,6 +56,15 @@ figcaption{
 
 .endText {
 
+    mark {
+        background-color: rgb(110, 255, 110);
+    }
+    a {
+        color:green;
+        text-decoration: underline;
+        font-weight: bold;
+    }
+
     h2 {
         font-size: clamp(14px, calc(1rem + 1vw), 26px);
     }
@@ -67,4 +76,4 @@ figcaption{
         color:$dark-text;
         font-size: clamp(14px, calc(1rem + 1vw), 18px);
     }
-}
+} 
