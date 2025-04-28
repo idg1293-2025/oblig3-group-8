@@ -53,3 +53,18 @@ figcaption{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.endText {
+
+    h2 {
+        font-size: clamp(14px, calc(1rem + 1vw), 27px);
+    }
+
+    h3 {
+        font-size: clamp(14px, calc(1rem + 1vw), 25px);
+    }
+    p {
+        color:$dark-text;
+        font-size: clamp(14px, calc(1rem + 1vw), 18px);
+    }
+}

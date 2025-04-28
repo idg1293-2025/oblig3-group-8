@@ -34,6 +34,14 @@
   margin-inline: 30%;
 }
 
+.endText {
+  text-align: center;
+  margin-top: 5%;
+}
+.endText p {
+  margin: 1% 0 1% 0;
+}
+
 .button {
   display: grid;
   grid-template-columns: 2fr 2fr;
@@ -244,4 +252,15 @@ figcaption {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.endText h2 {
+  font-size: clamp(14px, 1rem + 1vw, 27px);
+}
+.endText h3 {
+  font-size: clamp(14px, 1rem + 1vw, 25px);
+}
+.endText p {
+  color: black;
+  font-size: clamp(14px, 1rem + 1vw, 18px);
 }/*# sourceMappingURL=global.css.map */
