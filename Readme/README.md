@@ -17,13 +17,13 @@ Showing to characters debating the great changes to being able to go to the beac
 The way we would subvert is using this "utopian" worldview and show how they would imagine it then later showing the actual realities what would happen removing a vital animal from an ecosystem but we struggled to come with ideas for interactivity and it would be more of just as an aha to the user which might weaken the actual messaging of the vital importance of species in their various environments This would vary somewhere from goal 13 - 15. 
 ## Storyboard
 First you see a house with a smooth transition into the house
-![House outside shot](images/image-3.png)
+![House outside shot](images/house-storyboard.png)
 The idea was to zoom into different rooms showing people (Later just the Alex character)
-![Rooms showcasing people](images/image-2.png)
+![Rooms showcasing people](images/room-overview-storyboard.png)
 Then showcasing the person using the shower or bath etc and the questions of the usage related to it under
-![Person showering](images/image-1.png)
+![Person showering](images/shower-storyboard.png)
 
-[Person bathing](images/image.png)
+[Person bathing](images/bath-storyboard.png)
 ## Stack used
 We didn't use any specific stack for the implementation of the project the only exception is the code and idea for the scrolling animation effect using the intersection observer API we have utilized the idea came from a Medium Article ***How to Implement Animation On Scroll with Vanilla JavaScript*** https://javascript.plainenglish.io/how-to-implement-animation-on-scroll-with-vanilla-javascript-655093a38059 
 ### Use of Animations Interactions and Observers
