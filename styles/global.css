@@ -23,11 +23,14 @@
   place-items: center;
   justify-content: space-around;
   width: 100vw;
-  height: 105vh;
+  height: 100vh;
+  gap: 20px;
 }
-.bathroom--conatiner {
-  grid-column-start: 1;
-  grid-column-end: 3;
+
+.bathroom--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .questions {
@@ -95,24 +98,28 @@ figure figcaption {
   width: 50%;
 }
 .bathroom--container__washing {
-  width: 50%;
-  padding-block-start: 5%;
+  position: relative;
+  left: 6vw;
+  top: 5vh;
 }
 .bathroom--container__shower {
-  width: 50%;
+  position: relative;
+  left: 2vw;
+  top: 9vh;
 }
 .bathroom--container__bath {
-  width: 50%;
-  padding-inline-end: 30%;
-  padding-block-start: 30%;
+  position: relative;
+  left: -1vw;
+  top: 9vh;
 }
 .bathroom--container__toilet {
-  width: 30%;
-  padding-inline-end: 20%;
-  padding-block-start: 30%;
+  width: 50%;
+  position: relative;
+  left: -16vw;
+  top: 8.7vh;
 }
 
-.water--meter {
+.water--meter__container {
   width: 100%;
   position: relative;
   overflow: hidden;
