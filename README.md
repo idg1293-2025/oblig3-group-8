@@ -39,3 +39,5 @@ In terms of interactions the main interactive part of the site is the quiz that 
 Another was the updateWaterTank function, after each use of the quiz function a position sticky watertank gets filled more and more after every quiz answer to later overflow and transition to the end of the story and the results part of the page. 
 
 SVG elements that were not made by us, were taken from https://www.svgrepo.com/
+
+link to github pages: https://idg1293-2025.github.io/oblig3-group-8/index.html 
