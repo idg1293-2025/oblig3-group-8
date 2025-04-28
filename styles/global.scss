@@ -1,18 +1,20 @@
 @use "layout/layout";
-@use "layout/container";
 @use "components/button";
 @use "_reset.scss";
 @use "components/svgs";
 @use "components/animations";
 @use "components/wave";
 
+
+// Font related variables
 $header-font: "Lucida Console", "Courier New", monospace;
 $regular-font: Arial, Helvetica, sans-serif;
-$text: white;
+$light-text: white;
+$dark-text: black;
 
 h1{
     font-family: $header-font;
-    color: $text;
+    color: $light-text;
     font-size: clamp(26px, calc(1rem + 1vw), 70px);
 }
 
@@ -22,7 +24,7 @@ button {
 
 p {
     font-family: $regular-font;
-    color: $text;
+    color: $light-text;
     font-size: clamp(14px, calc(1rem + 1vw), 28px);
 }
 figcaption{
@@ -37,13 +39,14 @@ figcaption{
 
 .questions{
     p {
-        color:black;
+        color:$dark-text;
         font-family: $header-font;
         background-color: rgb(255, 255, 255, 0.8);
-        font-size: clamp(5px, calc(0.5rem + 1vw), 25px);
+        font-size: clamp(5px, calc(0.5rem + 1vw), 25px); // Clamp to make it responsive.
     }
 }
 
+// Adds the room.svg as a background element, which then we place alex and whatever he's doing infront along with the questions.
 .bathroom {
     background-image: url(../../images/room.svg);
     background-size: contain;
