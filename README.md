@@ -37,3 +37,5 @@ The third is the use of the filling water tank to display the characters usage o
 In terms of interactions the main interactive part of the site is the quiz that askes how much different activities use in terms of liters of water. By grabbing the numbers directly from the buttons and comparing them to the quiz object inside the script to validate the users answers and log the result later in the script and depending of the result of that scaling up or down the different tanks to visualize the difference.
 
 Another was the updateWaterTank function, after each use of the quiz function a position sticky watertank gets filled more and more after every quiz answer to later overflow and transition to the end of the story and the results part of the page. 
+
+SVG elements that were not made by us, were taken from https://www.svgrepo.com/

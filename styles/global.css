@@ -37,14 +37,25 @@
   margin-inline: 30%;
 }
 
-.endText {
+.footer {
+  margin: 0 5% 2% 5%;
+  padding: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
   text-align: center;
 }
-.endText p, .endText h2 {
-  margin: 1% 0 1% 0;
+.footer--container {
+  padding-block: 3%;
+  display: grid;
+  text-align: start;
+  width: 80%;
+  gap: 0.5rem;
+  grid-template-columns: 1fr 1fr;
 }
-.endText h3 {
-  margin-top: 2%;
+.footer img {
+  max-width: 100%;
+  width: 300px;
+  border-radius: 3px;
 }
 
 .button {
@@ -147,6 +158,52 @@ figure figcaption {
   z-index: 1;
 }
 
+@media (max-width: 800px) {
+  .water--meter__sticky {
+    width: 15%;
+    top: 80%;
+  }
+}
+@keyframes moveWave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.water--container {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  animation: moveWave 2s infinite ease-in-out;
+}
+.water--container__alex {
+  position: absolute;
+  z-index: 0;
+  height: 15%;
+  left: 35%;
+  top: 2%;
+}
+.water--container p {
+  position: absolute;
+  margin-inline-start: 5%;
+  z-index: 1;
+}
+.water--container p:nth-child(3) {
+  top: 20%;
+}
+.water--container p:nth-child(4) {
+  top: 40%;
+}
+.water--container__wave {
+  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+}
+
 @keyframes movezoom {
   0% {
     transform: translate(0, 0) scale(1);
@@ -177,12 +234,6 @@ figure figcaption {
   z-index: 3;
 }
 
-/*
- Adding this for later
-@media (prefers-reduced-motion) {
-
-}
-*/
 .water--meter__level {
   transition: height 0.5s ease, width 0.5s ease;
 }
@@ -198,29 +249,82 @@ figure figcaption {
 }
 .stage-3 {
   height: 92%;
+  transition: height 3s ease, width 3s ease;
 }
 
-@keyframes moveWave {
+@keyframes shake {
   0% {
-    transform: translateY(0);
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
   }
   50% {
-    transform: translateY(10px);
+    transform: rotate(15deg);
   }
   100% {
-    transform: translateY(0);
+    transform: rotate(0deg);
   }
 }
-.water--container {
-  margin: 0;
-  padding: 0;
-  animation: moveWave 2s infinite ease-in-out;
+@keyframes spil {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
 }
-.water--container__wave {
-  -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
-          mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 70%, rgba(0, 0, 0, 0) 100%);
+.shake {
+  animation: shake 1.5s ease-in-out infinite;
+  animation-delay: 1.5s;
 }
 
+.spil {
+  animation: spil 0.5s ease forwards;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion) {
+  .hide, .show {
+    transition: 2s;
+    filter: none;
+  }
+  .hide {
+    transform: translateY(100px);
+  }
+  .water--meter__level {
+    transition: height 2.5s ease-in, width 2.5s ease-in;
+  }
+  .spil {
+    animation: spil 2.5s ease forwards;
+  }
+  .water--container__alex {
+    animation: moveWave 4s infinite ease-in-out;
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-10deg);
+    }
+    50% {
+      transform: rotate(10deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  .shake {
+    animation: shake 3.5s infinite;
+  }
+  .water--container {
+    animation: moveWave 5s infinite;
+  }
+  .street .animate {
+    animation: movezoom 40s ease-in-out forwards;
+  }
+}
 h1 {
   font-family: "Lucida Console", "Courier New", monospace;
   color: white;
@@ -263,21 +367,25 @@ figcaption {
   background-position: center;
 }
 
-.endText mark {
-  background-color: rgb(110, 255, 110);
+.footer {
+  background-color: rgb(33, 44, 255);
 }
-.endText a {
-  color: green;
+.footer a {
+  color: rgb(110, 255, 110);
   text-decoration: underline;
   font-weight: bold;
 }
-.endText h2 {
+.footer h2 {
   font-size: clamp(4px, 0.5rem + 1vw, 26px);
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
 }
-.endText h3 {
+.footer h3 {
+  color: white;
   font-size: clamp(4px, 0.5rem + 1vw, 24px);
+  font-family: "Lucida Console", "Courier New", monospace;
 }
-.endText p {
-  color: black;
+.footer p {
+  color: white;
   font-size: clamp(4px, 0.5rem + 1vw, 18px);
 }/*# sourceMappingURL=global.css.map */

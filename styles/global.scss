@@ -2,8 +2,8 @@
 @use "components/button";
 @use "_reset.scss";
 @use "components/svgs";
-@use "components/animations";
 @use "components/wave";
+@use "components/animations";
 
 
 // Font related variables
@@ -56,26 +56,27 @@ figcaption{
     background-position: center;
 }
 
-.endText {
-
-    mark {
-        background-color: rgb(110, 255, 110);
-    }
+.footer {
+    background-color: rgb(33, 44, 255);
     a {
-        color:green;
+        color:rgb(110, 255, 110);
         text-decoration: underline;
         font-weight: bold;
     }
 
     h2 {
         font-size: clamp(4px, calc(0.5rem + 1vw), 26px);
+        color:$light-text;
+        font-family: $header-font;
     }
 
     h3 {
+        color:$light-text;
         font-size: clamp(4px, calc(0.5rem + 1vw), 24px);
+        font-family: $header-font;
     }
     p {
-        color:$dark-text;
+        color:$light-text;
         font-size: clamp(4px, calc(0.5rem + 1vw), 18px);
     }
 } 

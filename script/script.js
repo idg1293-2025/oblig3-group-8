@@ -115,13 +115,16 @@ function showResult(){
     console.log("You guessed the most water used try again?");
   }
 }
-
+const waterLevel = document.getElementById('water-level');
+const waterTank = document.querySelector('.water--meter__container')
 function updateWaterTank(index){
-  const waterTank = document.getElementById('water-level');
-  
-  waterTank.classList.remove('stage-0', 'stage-1', 'stage-2', 'stage-3');
-
-  waterTank.classList.add('stage-' + index);
+  waterLevel.classList.remove('stage-0', 'stage-1', 'stage-2', 'stage-3');
+  waterLevel.classList.add('stage-' + index);
+  if(waterLevel.classList.contains('stage-3')){
+    waterTank.classList.add('shake');
+  } else{
+    waterTank.classList.remove('shake');
+  }
 }
 
 
@@ -139,17 +142,16 @@ const target = document.querySelector(".street--house__1");
         });
     }).observe(target);
 
+    
     const stickyElement = document.querySelector(".water--meter__sticky");
     const targetSection = document.querySelector(".grid--watertank"); 
-  
+    
     const sticky = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             stickyElement.classList.remove("show"); // Removes 'show' class when intersecting final quiz result
-          } else {
-            stickyElement.classList.add("show"); // Add 'show' class when it's not intersecting
-          }
+          } 
         });
       },
       {
@@ -159,3 +161,21 @@ const target = document.querySelector(".street--house__1");
     );
     
     sticky.observe(targetSection);
+
+    const waveTarget = document.querySelector(".water")
+    const spil = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              waterTank.classList.add("spil");
+              waterTank.classList.remove("shake");
+              waterLevel.classList.remove('stage-3');
+          } else {
+              waterTank.classList.remove("spil");
+          }
+      });
+    },
+      {
+        threshold: 0.3,
+      }
+    );
+    spil.observe(waveTarget);
