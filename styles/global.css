@@ -36,10 +36,12 @@
 
 .endText {
   text-align: center;
-  margin-top: 5%;
 }
-.endText p {
+.endText p, .endText h2 {
   margin: 1% 0 1% 0;
+}
+.endText h3 {
+  margin-top: 2%;
 }
 
 .button {
@@ -255,10 +257,10 @@ figcaption {
 }
 
 .endText h2 {
-  font-size: clamp(14px, 1rem + 1vw, 27px);
+  font-size: clamp(14px, 1rem + 1vw, 26px);
 }
 .endText h3 {
-  font-size: clamp(14px, 1rem + 1vw, 25px);
+  font-size: clamp(14px, 1rem + 1vw, 24px);
 }
 .endText p {
   color: black;
