@@ -1,3 +1,4 @@
+//animation for the red house
 @keyframes movezoom {
     0% {
         transform: translate(0, 0) scale(1);
@@ -7,6 +8,7 @@
     }
 }
 
+//animation for all the hide classes and js script
 .hide {
     transition: all 1s;
     opacity: 0;
@@ -14,12 +16,14 @@
     transform: translateY(200px);
 };
 
+//show class and animation.
 .show{
     opacity: 1;
     filter: blur(0);
     transform: translateY(0);
 };
 
+//how the animation is apearing and duration
 .street{
     .animate{
         animation: movezoom 15s ease-in-out forwards; 
@@ -37,6 +41,8 @@
 
 }
 */
+
+//animation to be called by js
 .water--meter__level {
     transition: height 0.5s ease, width 0.5s ease;
   }

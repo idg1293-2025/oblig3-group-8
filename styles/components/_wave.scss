@@ -1,4 +1,4 @@
-
+//abimation for the wave
 @keyframes moveWave {
   0% {
     transform: translateY(0);
@@ -10,6 +10,8 @@
     transform: translateY(0);
   }
 }
+//variable for the mask gradient applied for the wave svg
+$gradient-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
 
 // Makes the water move up and down, makiking it look like its moving.
 
@@ -18,8 +20,6 @@
   padding: 0;
   animation: moveWave 2s infinite ease-in-out;
   &__wave{
-    $gradient-mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
-    
     mask-image: $gradient-mask;
   }
 }
